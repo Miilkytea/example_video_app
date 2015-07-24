@@ -47,8 +47,9 @@ A `BandRep` belongs to a `Band`, and maps to a user account, so it needs:
 
 - [x] As a user, I would like to be able to log in as a member of, or representative
   of, a band.
+- [x] As a band rep, I would like to be able to add or remove videos for a band.
 - [ ] As a band rep, I would like to be able to create a new band.
-- [ ] As a band rep, I would like to be able to add or remove videos for a band.
+
 
 ### Iceboxed
 

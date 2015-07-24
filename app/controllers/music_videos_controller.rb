@@ -19,6 +19,16 @@ class MusicVideosController < ApplicationController
     end
   end
 
+  def destroy
+    music_video = MusicVideo.find(params[:id])
+    if music_video.destroy
+      redirect_to band_path(@band), notice: "Video removed!"
+    else
+      flash.now.alert = "Error attempting to delete video."
+      redirect_to band_path(@band)
+    end
+  end
+
 private
 
   def authenticate

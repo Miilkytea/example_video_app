@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     # has many within a belongs to, when you want to know both
     # can be "nested": 
     # http://guides.rubyonrails.org/routing.html#nested-resources
-    resources :music_videos, only: [:new, :create]
+    resources :music_videos, only: [:new, :create, :destroy]
   end
   resources :band_reps, only: [:new, :create]
 
