@@ -4,6 +4,8 @@ class CreateMusicVideos < ActiveRecord::Migration
       t.string :title
       t.string :video_embed_uri
 
+      t.integer :band_id
+
       t.timestamps null: false
     end
   end
