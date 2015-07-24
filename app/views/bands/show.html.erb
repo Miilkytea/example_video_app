@@ -3,6 +3,11 @@
 
 <h3>Genre: <%= @band.genre %></h3>
 
+<% if logged_in? && current_user.band == @band %>
+  <p><%= link_to "Hello, rep! Add new videos here.", 
+                 new_band_music_video_path(@band) %></p>
+<% end %>
+
 <ul>
   <% @band.music_videos.each do |music_video| %>
     <li>

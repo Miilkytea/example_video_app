@@ -1,0 +1,21 @@
+
+<h3>Add a new video!</h3>
+
+<!-- http://stackoverflow.com/questions/2034700/form-for-with-nested-resources -->
+<%= form_for [@band, @music_video] do |f| %>
+  <div class="field">
+    <%= f.label :band %>
+    <%= f.text_field :band, value: @band.name, disabled: true %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :video_embed_uri, "Video code" %>
+    <%= f.text_field :video_embed_uri %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add" %>
+  </div>
+<% end %>
