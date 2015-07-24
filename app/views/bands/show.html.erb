@@ -5,7 +5,10 @@
 <ul>
   <% @band.music_videos.each do |music_video| %>
     <li>
-      <%= music_video.title %>
+      <%= music_video.title %><br>
+      <iframe id="ytplayer" type="text/html" width="320" height="180"
+       src="http://www.youtube.com/embed/<%= music_video.video_embed_uri %>?origin=http://localhost"
+       frameborder="0"/></iframe>
     </li>
   <% end %>
 </ul>

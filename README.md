@@ -27,7 +27,7 @@ A `MusicVideo` belongs to a `Band`, and has the following attributes:
 - [x] As a user, I would like to see a list of available bands on the home page.
 - [x] As a user, I would like to be able to go to a band's page and see a list of
   their videos.
-- [ ] As a user, I would like to be able to load a given YouTube video for a
+- [x] As a user, I would like to be able to load a given YouTube video for a
   band's song within the page.
 
 ### Iceboxed
