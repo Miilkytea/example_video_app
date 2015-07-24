@@ -10,8 +10,13 @@
   <header>
     <h1><%= link_to "Pop-up Vid.io", root_path %></h1>
     <nav>
-      <%= link_to "Log In as Band Rep", login_path %> |
-      <%= link_to "Sign up as a Band Rep!", new_band_rep_path %>
+      <% if logged_in? %>
+        You can manage the band <%= current_user.band.name %>.
+        <%= button_to "Log out", session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log In as Band Rep", login_path %> |
+        <%= link_to "Sign up as a Band Rep!", new_band_rep_path %>
+      <% end %>
     </nav>
   </header>
 
