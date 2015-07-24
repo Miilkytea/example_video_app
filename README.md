@@ -22,7 +22,7 @@ A `MusicVideo` belongs to a `Band`, and has the following attributes:
 
 ### MVP
 
-- [ ] As a user, I would like to land on a page that explains what the site is 
+- [x] As a user, I would like to land on a page that explains what the site is 
   (a "home" page).
 - [ ] As a user, I would like to see a list of available bands on the home page.
 - [ ] As a user, I would like to be able to go to a band's page and see a list of
