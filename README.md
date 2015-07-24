@@ -6,9 +6,16 @@ information.
 
 ## Data Model & ERD
 
-![ERD](erd.jpg)
+#### MVP
 
-A `Band` can have many `MusicVideo`s, and has the following attributes:
+![ERD](erd-mvp.jpg)
+
+#### Sprint 2
+
+![ERD](erd-sprint2.jpg)
+
+A `Band` can have many `MusicVideo`s, and many `BandRep`s, and has the 
+following attributes:
 
 - `name`
 - `genre`
@@ -17,6 +24,12 @@ A `MusicVideo` belongs to a `Band`, and has the following attributes:
 
 - `title`
 - `video_embed_url`
+
+A `BandRep` belongs to a `Band`, and maps to a user account, so it needs:
+
+- `username` (ie, an email)
+- `password_digest`
+- (`has_secure_password` will create the other necessary methods)
 
 ## User Stories
 
@@ -30,12 +43,15 @@ A `MusicVideo` belongs to a `Band`, and has the following attributes:
 - [x] As a user, I would like to be able to load a given YouTube video for a
   band's song within the page.
 
-### Iceboxed
+### Sprint 2
 
 - [ ] As a user, I would like to be able to log in as a member of, or representative
   of, a band.
 - [ ] As a band rep, I would like to be able to create a new band.
 - [ ] As a band rep, I would like to be able to add or remove videos for a band.
+
+### Iceboxed
+
 - [ ] As a user, I would like to be able to add "pop-ups", or comments, to a video.
   These pop-ups would include a time in the video (in minutes and seconds) and
   a fun fact about what's happenning on the screen. The pop-up can also be
