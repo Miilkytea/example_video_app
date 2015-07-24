@@ -6,8 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Band.destroy_all
+# order the destroys so that we start with the
+# has_manys, and then the belongs_to... avoids
+# cascade errors
+BandRep.destroy_all
 MusicVideo.destroy_all
+Band.destroy_all
 
 mac = Band.create(
   name:  "Fleetwood Mac", 
@@ -39,3 +43,14 @@ ham.music_videos << MusicVideo.create(
   title:           "Forever", 
   video_embed_uri: "sEwM6ERq0gc"
 )
+
+# here we need to use .new/.save instead of .create,
+# because has_secure_password uses .save to check that
+# password and password_confirmation align!
+pj = BandRep.new(
+  username: "pj@ga.co",
+  password: "test",
+  password_confirmation: "test"
+)
+
+ham.band_reps << pj
