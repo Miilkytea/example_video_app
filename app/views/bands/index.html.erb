@@ -5,3 +5,9 @@
 <p>When here you can see a list of bands. Click on any band to see it's video.</p>
 
 <p>Thanks for coming!</p>
+
+<ul>
+  <% @bands.each do |band| %>
+    <li><%= band.name %></li>
+  <% end %>
+</ul>
