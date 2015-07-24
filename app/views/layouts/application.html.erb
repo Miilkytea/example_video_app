@@ -11,6 +11,12 @@
     <h1><%= link_to "Pop-up Vid.io", root_path %></h1>
   </header>
 
+  <% flash.each do |name, message| %>
+    <div class="flash-message flash-message-<%= name %>">
+      <h4><em><%= message %></em></h4>
+    </div>
+  <% end %>
+  
   <%= yield %>
 </body>
 </html>
