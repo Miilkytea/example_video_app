@@ -9,6 +9,10 @@
 <body>
   <header>
     <h1><%= link_to "Pop-up Vid.io", root_path %></h1>
+    <nav>
+      <%= link_to "Log In as Band Rep", login_path %> |
+      <%= link_to "Sign up as a Band Rep!", new_band_rep_path %>
+    </nav>
   </header>
 
   <% flash.each do |name, message| %>
